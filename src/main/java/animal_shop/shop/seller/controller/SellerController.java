@@ -55,7 +55,7 @@ public class SellerController {
     }
 
     //상품 마이페이지에 뜰려면 보내야 하니까
-    @GetMapping("/item/update")
+    @PatchMapping("/item/update/{itemId}")
     public ResponseEntity<?> getItems(
             @RequestHeader(value = "Authorization") String token,
             @RequestBody ItemDTOList itemDTOList) {
